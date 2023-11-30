@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 
 const SOCKET_SERVER_URL = 'http://localhost:3001'; // Your Socket.IO server URL
