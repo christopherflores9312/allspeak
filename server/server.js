@@ -4,7 +4,16 @@ const socketIo = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server);
+const cors = require('cors');
+
+app.use(cors()); // Enable CORS for all routes
+
+const io = socketIo(server, {
+  cors: {
+    origin: "*", // This will allow all origins. You may want to restrict this in production.
+    methods: ["GET", "POST"]
+  }
+});
 
 io.on('connection', (socket) => {
   console.log('A user connected');
