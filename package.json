@@ -17,7 +17,7 @@
   "scripts": {
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build",
-    "build": "cd src && react-scripts build",
+    "build": "react-scripts build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "react-scripts start",
     "server": "nodemon server/server.js",
@@ -36,6 +36,10 @@
       "not dead",
       "not op_mini all"
     ],
+    "engines": {
+      "node": "16.x",
+      "npm": "8.x"
+    },    
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
