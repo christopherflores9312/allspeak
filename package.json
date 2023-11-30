@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm install && npm run build",
     "build": "react-scripts build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "react-scripts start",
